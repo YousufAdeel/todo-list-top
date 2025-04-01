@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>// TODO</h1>
+      <ul>
+        <li class="active" data-filter="all">All</li>
+        <li data-filter="today">Today</li>
+        <li data-filter="important">Important</li>
+      </ul>
+      <div class="projects">
+        <h2>Projects</h2>
+        <ul id="project-list">
+          <li>Inbox</li>
+        </ul>
+        <button id="add-project">+ Add Project</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h2 id="view-title">All Tasks</h2>
+      <form id="todo-form">
+        <input type="text" id="todo-title" placeholder="Title" required />
+        <input type="date" id="todo-date" />
+        <select id="todo-priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <div id="todo-list"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
